@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "django-hedera"
+version = "0.1.0"
+description = "guide on blockchain storage and retrieval using Hedera blockchain and Django"
+authors = ["UJ Blockchain"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-decouple = "^3.8"
+django-autoslug = "^1.9.9"
+django-axes = "^6.3.0"
+django-cleanup = "^8.1.0"
+jinja2 = "^3.1.3"
+pillow = "^10.2.0"
+shortuuid = "^1.0.11"
+
+
+[tool.poetry.group.dev.dependencies]
+djlint = "^1.34.1"
+black = "^24.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

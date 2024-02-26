@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "guide on blockchain storage and retrieval using Hedera blockchain and Django"
 authors = ["UJ Blockchain"]
 license = "MIT"
-readme = "README.md"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -15,11 +15,30 @@ django-cleanup = "^8.1.0"
 jinja2 = "^3.1.3"
 pillow = "^10.2.0"
 shortuuid = "^1.0.11"
+django-split-settings = "^1.2.0"
 
+[tool.isort]
+multi_line_output = 5
+line_length = 80
+
+[tool.yapf]
+[tool.yapf.common]
+based_on_style = "google"
+align_closing_bracket_with_visual_indent = true
+coalesce_brackets = true
+dedent_closing_brackets = true
+
+[tool.yapf.py]
+column_limit = 80
+inherit = "common"
+
+[tool.yapf.js]
+column_limit = 119
+inherit = "common"
 
 [tool.poetry.group.dev.dependencies]
 djlint = "^1.34.1"
-black = "^24.2.0"
+pre-commit = "^3.6.2"
 
 [build-system]
 requires = ["poetry-core"]

@@ -13,12 +13,6 @@ lint:
 	poetry run pre-commit run --all-files
 
 
-
-.PHONY:check-settings
-check-settings:
-	poetry run python -m core.manage check --settings=core.project.settings.split_settings
-
-
 .PHONY:migrate
 migrate:
 	poetry run python -m core.manage migrate

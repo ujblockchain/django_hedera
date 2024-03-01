@@ -1,5 +1,6 @@
-from decouple import config, Csv
 from pathlib import Path
+
+from decouple import Csv, config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
@@ -23,7 +24,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Security Settings In Production Environment
 X_FRAME_OPTIONS = 'DENY'

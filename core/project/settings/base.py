@@ -7,7 +7,6 @@ DEBUG = False
 # Allowed Host
 ALLOWED_HOSTS = ['djangohedera.com']
 
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',

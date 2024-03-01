@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "django-hedera"
+name = "core"
 version = "0.1.0"
 description = "guide on blockchain storage and retrieval using Hedera blockchain and Django"
 authors = ["UJ Blockchain"]

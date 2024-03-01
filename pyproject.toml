@@ -19,22 +19,14 @@ django-split-settings = "^1.2.0"
 
 [tool.isort]
 multi_line_output = 5
-line_length = 80
+line_length = 119
 
 [tool.yapf]
-[tool.yapf.common]
 based_on_style = "google"
 align_closing_bracket_with_visual_indent = true
 coalesce_brackets = true
-dedent_closing_brackets = true
-
-[tool.yapf.py]
-column_limit = 80
-inherit = "common"
-
-[tool.yapf.js]
 column_limit = 119
-inherit = "common"
+dedent_closing_brackets = true
 
 [tool.poetry.group.dev.dependencies]
 djlint = "^1.34.1"

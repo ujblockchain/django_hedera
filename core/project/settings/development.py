@@ -1,12 +1,6 @@
-from pathlib import Path
-
 from decouple import Csv, config
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
-
-# Build paths inside the project directory
-PROJECT_DIR = Path(__file__).resolve().parent.parent.parent
+from core.project.settings import BASE_DIR
 
 # Secrete key
 SECRET_KEY = config('SECRET_KEY')

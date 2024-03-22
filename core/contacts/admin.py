@@ -10,8 +10,9 @@ class ContactAdmin(admin.ModelAdmin):
         'subject',
         'reference',
         'message',
-        'last_updated',
+        'transaction_id',
         'publish',
+        'last_updated',
     ]
     list_display_links = [
         'message_id',
@@ -19,19 +20,24 @@ class ContactAdmin(admin.ModelAdmin):
         'subject',
         'reference',
         'message',
-        'last_updated',
+        'transaction_id',
         'publish',
+        'last_updated',
     ]
     list_filter = ['publish']
-    readonly_fields = ['message_id']
+    readonly_fields = [
+        'message_id',
+        'transaction_id',
+    ]
     search_fields = [
         'message_id',
         'name',
         'subject',
         'reference',
         'message',
-        'last_updated',
+        'transaction_id',
         'publish',
+        'last_updated',
     ]
     list_per_page = 50
     view_on_site = True
@@ -47,8 +53,9 @@ class ContactAdmin(admin.ModelAdmin):
         'subject',
         'reference',
         'message',
-        'last_updated',
+        'transaction_id',
         'publish',
+        'last_updated',
     ]
 
 

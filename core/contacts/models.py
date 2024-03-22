@@ -14,9 +14,10 @@ class Contact(models.Model):
     subject = models.CharField(max_length=100, null=False, blank=False, help_text='message subject')
     reference = models.CharField(max_length=100, null=False, blank=False, help_text='message reference')
     message = models.CharField(max_length=500, null=False, blank=False, help_text='message')
+    transaction_id = models.CharField(max_length=600, null=True, blank=True, help_text='blockchain transaction id')
+    publish = models.BooleanField(default=True)
     date_created = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(default=timezone.now)
-    publish = models.BooleanField(default=True)
 
     def __str__(self):
         return self.contract_id

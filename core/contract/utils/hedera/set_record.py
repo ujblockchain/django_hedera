@@ -8,7 +8,7 @@ contractId = deploy_contract()
 
 
 # store record in hedera blockchain using solidity function
-def get_receipt(message_id, name, subject, ref, message):
+def record_receipt(message_id, name, subject, ref, message):
     resp = (
         ContractExecuteTransaction().setGas(200_000).setContractId(ContractId.fromString(contractId)).setFunction(
             'setRecord',

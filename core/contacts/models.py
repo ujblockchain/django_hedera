@@ -23,4 +23,4 @@ class Contact(models.Model):
         return self.contract_id
 
     class Meta:
-        ordering = 'date_created'
+        ordering = ['date_created']

@@ -3,8 +3,8 @@ from django.apps import AppConfig
 
 class ContactsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'contacts'
+    name = 'core.contacts'
 
     # register signal
     def ready(self):
-        import contacts.signals
+        import core.contacts.signals

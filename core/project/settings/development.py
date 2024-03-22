@@ -1,15 +1,13 @@
-from decouple import Csv, config
-
-from core.project.settings import BASE_DIR
+from core.project.settings import BASE_DIR, ENV
 
 # Secrete key
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = ENV.config('SECRET_KEY')
 
 # Allowed Host
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='127.0.0.1', cast=Csv())
+ALLOWED_HOSTS = ENV.config('ALLOWED_HOSTS', default='127.0.0.1', cast=ENV.csv())
 
 # Debug
-DEBUG = config('DEBUG')
+DEBUG = ENV.config('DEBUG')
 
 # Database
 DATABASES = {
@@ -19,5 +17,5 @@ DATABASES = {
     }
 }
 
-# Security Settings In Production Environment
+# Security Settings
 X_FRAME_OPTIONS = 'DENY'

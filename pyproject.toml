@@ -16,6 +16,7 @@ django-split-settings = "1.3.0"
 hedera-sdk-py = "^2.29.0"
 web3 = "^6.15.1"
 django = "~4.2.11"
+dotmap = "^1.3.30"
 
 [tool.isort]
 multi_line_output = 5

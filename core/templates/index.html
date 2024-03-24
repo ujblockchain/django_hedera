@@ -1,0 +1,116 @@
+{# load static #} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}" />
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
+        <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
+        <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#aca7a7" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+        <!-- Style -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+        <title>Message</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <h3 class="heading mb-4">Let's talk about everything!</h3>
+                                <p>
+                                    Send and save message on Hedera blockcchain. Easy Recording, Easy Retrieval all for
+                                    free!!
+                                </p>
+
+                                <p>
+                                    <img
+                                        src="{% static 'images/undraw-contact.svg' %}"
+                                        alt="Image"
+                                        class="img-fluid"
+                                    />
+                                </p>
+                            </div>
+                            <div class="col-md-6">
+                                <form method="post" id="contactForm">
+                                    {# csrf #} {% csrf_token %}
+
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            {{form.name}}
+                                            <span Style="color:red; font-size: 13px; font-style: italic;">
+                                                {% if form.errors and form.name.errors %}
+                                                    {{form.name.errors|striptags}}
+                                                {% endif%}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            {{form.subject}}
+                                            <span Style="color:red; font-size: 13px; font-style: italic;">
+                                                {% if form.errors and form.subject.errors %}
+                                                    {{form.subject.errors|striptags}}
+                                                {% endif%}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            {{form.reference}}
+                                            <span Style="color:red; font-size: 13px; font-style: italic;">
+                                                {% if form.errors and form.reference.errors %}
+                                                    {{form.reference.errors|striptags}}
+                                                {% endif%}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            {{form.message}}
+                                            <span Style="color:red; font-size: 13px; font-style: italic;">
+                                                {% if form.errors and form.message.errors%}
+                                                    {{form.message.errors|striptags}}
+                                                {% endif%}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <input
+                                                type="submit"
+                                                value="Send Message"
+                                                class="btn btn-primary rounded-0 py-2 px-4"
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,8 +1,9 @@
 import json
 
-from contract.models import DeployedContract
 from django.conf import settings
 from hedera import ContractCreateTransaction, FileCreateTransaction, Hbar
+
+from core.contract.models import DeployedContract
 
 from .get_client import OPERATOR_KEY, client
 
@@ -25,7 +26,7 @@ def deploy_contract():
 
         # open and read byte code file
         base_dir = settings.BASE_DIR
-        byte_code_file = open(f'{base_dir}/contract/utils/solidity/byte_code.json')
+        byte_code_file = open(f'{base_dir}/core/contract/utils/solidity/byte_code.json')
         byte_code = json.load(byte_code_file)
         byte_code_file.close()
 
@@ -36,11 +37,13 @@ def deploy_contract():
         file_transaction = FileCreateTransaction()
 
         # create file transaction for byte code
-        file_transaction_response = (file_transaction.setKeys(OPERATOR_KEY).setContents(byte_code).execute(client))
+        file_transaction_response = file_transaction.setKeys(OPERATOR_KEY).setContents(byte_code).execute(client)
         # transaction id
         fileId = file_transaction_response.getReceipt(client).fileId
+
         # init contract transaction
         blockchain_transaction = ContractCreateTransaction()
+
         # create hedera transaction
         blockchain_transaction_response = (
             blockchain_transaction.setGas(500_000).setBytecodeFileId(fileId).execute(client)

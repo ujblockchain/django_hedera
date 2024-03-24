@@ -1,4 +1,6 @@
 # SECURITY WARNING: keep the secret key used in production secret!
+from core.project.settings import BASE_DIR
+
 SECRET_KEY = NotImplemented
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -7,8 +9,14 @@ DEBUG = False
 # Allowed Host
 ALLOWED_HOSTS = ['djangohedera.com']
 
+# Admin path
+ADMIN_PATH = NotImplemented
+
 # Application definition
 INSTALLED_APPS = [
+    # third party apps
+    'jazzmin',
+    # core apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -34,7 +42,7 @@ ROOT_URLCONF = 'core.project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [f'{BASE_DIR}/core/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

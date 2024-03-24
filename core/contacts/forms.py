@@ -1,4 +1,6 @@
 from django import forms
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV3
 
 from .models import Contact
 
@@ -17,6 +19,8 @@ class ContactForm(forms.ModelForm):
             }
         )
     )
+    # recaptcha
+    captcha = ReCaptchaField(widget=ReCaptchaV3())
 
     class Meta:
         model = Contact

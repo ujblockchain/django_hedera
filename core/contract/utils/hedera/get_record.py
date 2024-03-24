@@ -1,5 +1,6 @@
-from contract.models import DeployedContract
 from hedera import ContractCallQuery, ContractFunctionParameters, Hbar
+
+from core.contract.models import DeployedContract
 
 from .get_client import client
 

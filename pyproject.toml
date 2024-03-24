@@ -18,6 +18,7 @@ web3 = "^6.15.1"
 django = "~4.2.11"
 dotmap = "^1.3.30"
 django-jazzmin = "^2.6.1"
+django-recaptcha = "^4.0.0"
 
 [tool.isort]
 multi_line_output = 5

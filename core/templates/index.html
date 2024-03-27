@@ -56,8 +56,7 @@
                                             {{form.name}}
                                             <span Style="color:red; font-size: 13px; font-style: italic;">
                                                 {% if form.errors and form.name.errors %}
-                                                    {{form.name.errors|striptags}}
-                                                {% endif%}
+                                                {{form.name.errors|striptags}} {% endif%}
                                             </span>
                                         </div>
                                     </div>
@@ -66,8 +65,7 @@
                                             {{form.subject}}
                                             <span Style="color:red; font-size: 13px; font-style: italic;">
                                                 {% if form.errors and form.subject.errors %}
-                                                    {{form.subject.errors|striptags}}
-                                                {% endif%}
+                                                {{form.subject.errors|striptags}} {% endif%}
                                             </span>
                                         </div>
                                     </div>
@@ -76,8 +74,7 @@
                                             {{form.reference}}
                                             <span Style="color:red; font-size: 13px; font-style: italic;">
                                                 {% if form.errors and form.reference.errors %}
-                                                    {{form.reference.errors|striptags}}
-                                                {% endif%}
+                                                {{form.reference.errors|striptags}} {% endif%}
                                             </span>
                                         </div>
                                     </div>
@@ -86,11 +83,15 @@
                                             {{form.message}}
                                             <span Style="color:red; font-size: 13px; font-style: italic;">
                                                 {% if form.errors and form.message.errors%}
-                                                    {{form.message.errors|striptags}}
-                                                {% endif%}
+                                                {{form.message.errors|striptags}} {% endif%}
                                             </span>
                                         </div>
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">{{ form.captcha }}</div>
+                                    </div>
+                                    {# captcha #}
+
                                     <div class="row">
                                         <div class="col-12">
                                             <input
@@ -111,6 +112,5 @@
         <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
         <script src="{% static 'js/popper.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/main.js' %}"></script>
     </body>
 </html>

@@ -19,10 +19,14 @@ def contract_deploy_store(sender, instance, created, **kwargs):
         receipt_transaction_id = record_receipt(instance.message_id, message_stream)
         # store the transaction id in db
         sender.objects.update(transaction_id=receipt_transaction_id)
+
+        # init email message
+        email_message = f'Transaction {receipt_transaction_id} has been created on Hedera testnet.',
+
         # send email
         send_mail(
-            subject='New Blockchain transaction',
-            message='A new message record has been stored on hedera testnet',
+            subject=f'New {receipt_transaction_id} transaction',
+            message=email_message,
             from_email='test@example.com',
             recipient_list=['user@example.com'],
             fail_silently=False,

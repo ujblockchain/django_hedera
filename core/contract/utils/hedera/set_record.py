@@ -21,4 +21,4 @@ def record_receipt(message_id, message_string):
     receipt = resp.getRecord(client)
 
     # get receipt
-    return {'receipt_id': receipt.transactionId.toString()}
+    return receipt.transactionId.toString()

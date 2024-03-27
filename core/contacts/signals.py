@@ -21,7 +21,8 @@ def contract_deploy_store(sender, instance, created, **kwargs):
         sender.objects.update(transaction_id=receipt_transaction_id)
 
         # init email message
-        email_message = f'Transaction {receipt_transaction_id} has been created on Hedera testnet.',
+        email_message = f'Transaction {receipt_transaction_id} has been created on Hedera testnet. \
+            \n\nThanks. \nMessage Sender Team.'
 
         # send email
         send_mail(

@@ -20,7 +20,7 @@ class Contact(models.Model):
     last_updated = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.contract_id
+        return self.message_id
 
     class Meta:
-        ordering = ['date_created']
+        ordering = ['-date_created']

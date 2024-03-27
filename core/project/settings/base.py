@@ -1,5 +1,5 @@
 # SECURITY WARNING: keep the secret key used in production secret!
-from core.project.settings import BASE_DIR
+from core.project.settings import ADMIN_PATH, BASE_DIR
 
 SECRET_KEY = NotImplemented
 
@@ -10,7 +10,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['djangohedera.com']
 
 # Admin path
-ADMIN_PATH = NotImplemented
+ADMIN_PATH = ADMIN_PATH
 
 # Application definition
 INSTALLED_APPS = [
@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core.contacts.apps.ContactsConfig',
     'core.contract.apps.ContractConfig',
+    'django_recaptcha',
 ]
 
 MIDDLEWARE = [

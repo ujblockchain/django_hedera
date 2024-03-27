@@ -48,27 +48,62 @@
                                 </p>
                             </div>
                             <div class="col-md-6">
+                                <br /><br /><br />
+
+                                {% for message in messages %}
+                                <p
+                                    style="
+                                        color: white;
+                                        padding: 10px;
+                                        border: 1px solid grey;
+                                        background: grey;
+                                        text-align: center;
+                                        text-transform: capitalize;
+                                    "
+                                >
+                                    {{message.message}}
+                                </p>
+                                {% endfor %}
+
                                 <form id="contactForm">
                                     <div class="row">
-                                        <div class="col-md-12 form-group">{{contact.name}}</div>
+                                        <div
+                                            class="col-md-12 form-group"
+                                            style="border: 1px solid grey; padding: 10px"
+                                        >
+                                            <span style="color: green">Name</span>: {{contract.0}}
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 form-group">{{contact.subject}}</div>
+                                        <div
+                                            class="col-md-12 form-group"
+                                            style="border: 1px solid grey; padding: 10px"
+                                        >
+                                            <span style="color: green">Subject</span>: {{contract.1}}
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 form-group">{{contact.reference}}</div>
+                                        <div
+                                            class="col-md-12 form-group"
+                                            style="border: 1px solid grey; padding: 10px"
+                                        >
+                                            <span style="color: green">Reference</span>: {{contract.2}}
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12 form-group">{{contact.message}}</div>
+                                        <div
+                                            class="col-md-12 form-group"
+                                            style="border: 1px solid grey; padding: 10px"
+                                        >
+                                            <span style="color: green">Message</span>: {{contract.3}}
+                                        </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-12">
-                                            <a
-                                                href="{{contact.transaction_id}}"
-                                                class="btn btn-primary rounded-0 py-2 px-4"
-                                            >
-                                                View blockcchain Transaction
-                                            </a>
+                                        <div class="col-12" style="border: 1px solid grey; padding: 10px">
+                                            <p>
+                                                <span style="color: green">Blockcchain Transaction</span>:
+                                                {{transaction_id.0}}
+                                            </p>
                                         </div>
                                     </div>
                                 </form>

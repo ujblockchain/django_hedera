@@ -29,7 +29,7 @@ runserver:
 
 
 .PHONY:superuser
-run-server:
+superuser:
 	poetry run python -m core.manage createsuperuser
 
 

@@ -14,11 +14,11 @@ def contract_deploy_store(sender, instance, created, **kwargs):
     # ensure instance has been created
     if created:
         #
-        message_stream = json.dumps([instance.name, instance.subject, instance.ref, instance.message])
+        message_stream = json.dumps([instance.name, instance.subject, instance.reference, instance.message])
         # deploy contract and store record in hedera, this is get record if it exist
-        receipt = record_receipt(instance.message_id, message_stream)
+        receipt_transaction_id = record_receipt(instance.message_id, message_stream)
         # store the transaction id in db
-        sender.objects.update(transaction_id=receipt.transactionId)
+        sender.objects.update(transaction_id=receipt_transaction_id)
         # send email
         send_mail(
             subject='New Blockchain transaction',

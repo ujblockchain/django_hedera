@@ -34,4 +34,4 @@ superuser:
 
 
 .PHONY:setup
-setup: install migrate install-pre-commit ;
+setup: install migrations migrate install-pre-commit ;

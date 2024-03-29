@@ -31,7 +31,6 @@ column_limit = 119
 dedent_closing_brackets = true
 
 [tool.poetry.group.dev.dependencies]
-djlint = "^1.34.1"
 pre-commit = "^3.6.2"
 
 [build-system]

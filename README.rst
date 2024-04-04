@@ -1,9 +1,9 @@
 .. image:: https://blockchain.uj.ac.za/static/images/main-logo.png
 
 
-=============================================
-Demystifying Blockchain April Edition 2024 
-=============================================
+====================================================
+Demystifying Blockchain Bootcamp April Edition 2024 
+====================================================
 
 South Africa-Switzerland Bilateral Research Chair in Blockchain Technology (UJ Blockchain) aims to explore blockchain 
 integrations with real-world applications and development in Agric food.

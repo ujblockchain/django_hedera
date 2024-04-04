@@ -18,7 +18,6 @@ Django Axes and Email with SMTP Host.
 
 
 .. code-block:: bash
-    
     SECRET_KEY = '...'
     DEBUG = ..
     ALLOWED_HOSTS = '...'

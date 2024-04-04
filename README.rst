@@ -18,6 +18,7 @@ Django Axes and Email with SMTP Host.
 
 
 .. code-block:: bash
+    
     SECRET_KEY = '...'
     DEBUG = ..
     ALLOWED_HOSTS = '...'
@@ -59,6 +60,7 @@ Recaptcha Setup
 Set *google recaptcha* public and private key in environment variables. Public and private key can be gotten from *https://developers.google.com/recaptcha/*. Ensure you use :emphasis:`reCAPTCHA v3`.
 
 .. code-block:: python
+
     RECAPTCHA_PUBLIC_KEY = '...'
     RECAPTCHA_PRIVATE_KEY = '...'
     RECAPTCHA_REQUIRED_SCORE = '...'
@@ -69,20 +71,22 @@ Running Project
 
 Setup
 ^^^^^^^^^^^
-
 .. code-block:: bash
+
     make setup
 
 
 create Superuser
 ^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
+
     make superuser
 
 
 Run Server
 ^^^^^^^^^^^
 .. code-block:: bash
+
     make runserver
 
 

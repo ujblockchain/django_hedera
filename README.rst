@@ -70,21 +70,21 @@ Running Project
 
 Setup
 ^^^^^^^^^^^
-.. code-block:: bash
+.. code-block:: none
 
     make setup
 
 
 create Superuser
 ^^^^^^^^^^^^^^^^^^
-.. code-block:: bash
+.. code-block:: none
 
     make superuser
 
 
 Run Server
 ^^^^^^^^^^^
-.. code-block:: bash
+.. code-block:: none
 
     make runserver
 

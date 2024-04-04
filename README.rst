@@ -58,7 +58,7 @@ Recaptcha Setup
 
 Set *google recaptcha* public and private key in environment variables. Public and private key can be gotten from *https://developers.google.com/recaptcha/*. Ensure you use :emphasis:`reCAPTCHA v3`.
 
-.. code-block:: python
+.. code-block:: none
 
     RECAPTCHA_PUBLIC_KEY = '...'
     RECAPTCHA_PRIVATE_KEY = '...'

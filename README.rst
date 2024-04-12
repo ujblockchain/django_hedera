@@ -53,6 +53,11 @@ Django Axes and Email with SMTP Host.
     EMAIL_USE_TSL = '...'
 
 
+
+Recaptcha Setup
+----------------
+
+
 Recaptcha Setup
 ----------------
 
@@ -63,6 +68,12 @@ Set *google recaptcha* public and private key in environment variables. Public a
     RECAPTCHA_PUBLIC_KEY = '...'
     RECAPTCHA_PRIVATE_KEY = '...'
     RECAPTCHA_REQUIRED_SCORE = '...'
+
+
+Install Java
+----------------
+
+This project uses a python wrapper for the Hedera Java SDk, as such *JDK > 11* must be installed. Ensure you add *JAVA_HOME* to path.
 
 
 Running Project

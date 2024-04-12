@@ -53,11 +53,6 @@ Django Axes and Email with SMTP Host.
     EMAIL_USE_TSL = '...'
 
 
-
-Recaptcha Setup
-----------------
-
-
 Recaptcha Setup
 ----------------
 
